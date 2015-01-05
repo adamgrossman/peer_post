@@ -9,7 +9,7 @@ class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = ('id', 'username', 'first_name', 'last_name', 'profile_photo', 'bio', 'date_joined', 'posted', 'comments',)
+        fields = ('id', 'username', 'first_name', 'last_name', 'profile_photo', 'bio', 'date_joined', 'posted', 'comments')
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -23,34 +23,22 @@ class GroupSerializer(serializers.ModelSerializer):
         return Link.objects.filter(group=obj).values_list('url', 'title', 'description', 'created_at', 'posted_user')
 
 
-class ChildCommentSerializer(serializers.Serializer):
-
-    def to_native(self, value):
-        return self.parent.to_native(value)
-
-
 class CommentSerializer(serializers.ModelSerializer):
-    children = ChildCommentSerializer(many=True,)
-    child = serializers.SerializerMethodField()
     author_name = serializers.SerializerMethodField()
+    children = serializers.SerializerMethodField()
+    created_at = serializers.DateTimeField(format="%m/%d/%Y")
 
     class Meta:
         model = Comment
-        fields = ('id', 'created_at', 'body', 'author_name', 'parent', 'children', 'child')
+        fields = ('id', 'created_at', 'body', 'author_name', 'parent', 'children')
 
     def get_author_name(self, obj):
         return obj.author.username
 
-    def get_child(self, obj):
+    def get_children(self, obj):
         children = Comment.objects.filter(lft=obj.id)
-        print children
-        child = ChildCommentSerializer(children, many=True)
-        return child
-
-
-class TopLevelCommentSerializer(serializers.Serializer):
-    class Meta:
-        model = Comment
+        child = CommentSerializer(children, many=True)
+        return child.data
 
 
 class LinkSerializer(serializers.ModelSerializer):
@@ -58,6 +46,7 @@ class LinkSerializer(serializers.ModelSerializer):
     posted_by = serializers.SerializerMethodField()
     group = serializers.StringRelatedField()
     score = serializers.SerializerMethodField()
+    created_at = serializers.DateTimeField(format="%m/%d/%Y")
 
     class Meta:
         model = Link
