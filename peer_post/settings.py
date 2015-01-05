@@ -86,13 +86,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_REDIRECT_URL = 'index'
+
 try:
     from local_settings import *
 except ImportError:
     pass
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-TEMPLATE_DIRS = [(os.path.join(BASE_DIR, "group_feed/templates")),]
+TEMPLATE_DIRS = [(os.path.join(BASE_DIR, "feed/templates")),]
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "static", *MEDIA_URL.strip("/").split("/"))
