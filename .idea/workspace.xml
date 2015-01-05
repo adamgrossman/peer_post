@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd263e09-1c06-4643-aa01-b95fc67fc8d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/admin.py" afterPath="$PROJECT_DIR$/feed/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/v1/api/serializers.py" afterPath="$PROJECT_DIR$/feed/v1/api/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peer_post/settings.py" afterPath="$PROJECT_DIR$/peer_post/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="peer_post.iws" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feed/v1/api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8192771" vertical-offset="477" max-vertical-offset="975">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.48380566" vertical-offset="766" max-vertical-offset="1260">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -52,10 +50,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peer_post/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="1470">
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1095">
+            <state vertical-scroll-proportion="0.0" vertical-offset="601" max-vertical-offset="1095">
               <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
@@ -105,8 +113,8 @@
         <option value="$PROJECT_DIR$/feed/v1/urls.py" />
         <option value="$PROJECT_DIR$/peer_post/urls.py" />
         <option value="$PROJECT_DIR$/feed/models.py" />
-        <option value="$PROJECT_DIR$/peer_post/settings.py" />
         <option value="$PROJECT_DIR$/feed/admin.py" />
+        <option value="$PROJECT_DIR$/peer_post/settings.py" />
         <option value="$PROJECT_DIR$/feed/v1/api/serializers.py" />
       </list>
     </option>
@@ -114,7 +122,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1235" />
-    <option name="height" value="773" />
+    <option name="height" value="769" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -241,7 +249,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="admin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/admin.py&#10;setti&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;model&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;setting&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py" />
+    <property name="SearchEverywhereHistoryKey" value="settin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;admin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/admin.py&#10;setti&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;model&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;setting&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -470,7 +478,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1235" height="773" extended-state="6" />
+    <frame x="0" y="23" width="1235" height="769" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -483,7 +491,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2528409" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25428572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -607,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peer_post/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5180723" vertical-offset="972" max-vertical-offset="1470">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1095">
@@ -625,10 +625,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/peer_post/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="1470">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feed/v1/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8192771" vertical-offset="477" max-vertical-offset="975">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.48380566" vertical-offset="766" max-vertical-offset="1260">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>

@@ -20,35 +20,48 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'description', 'created_at', 'links')
 
     def get_links(self, obj):
-        # values list for list
         return Link.objects.filter(group=obj).values_list('url', 'title', 'description', 'created_at', 'posted_user')
-        # values for dict
-        # return Link.objects.filter(group=obj).values('url', 'title', 'description', 'created_at', 'posted_user')
+
+
+class ChildCommentSerializer(serializers.Serializer):
+
+    def to_native(self, value):
+        return self.parent.to_native(value)
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    children = ChildCommentSerializer(many=True,)
+    child = serializers.SerializerMethodField()
     author_name = serializers.SerializerMethodField()
-    # link = serializers.SerializerMethodField()
 
     class Meta:
         model = Comment
-        # fields = ('id', 'created_at', 'body', 'link', 'author_name', 'parent',)
-        fields = ('id', 'created_at', 'body', 'author_name', 'parent',)
+        fields = ('id', 'created_at', 'body', 'author_name', 'parent', 'children', 'child')
 
     def get_author_name(self, obj):
         return obj.author.username
 
-    # def get_link(self, obj):
-    #     return obj.link.title
+    def get_child(self, obj):
+        children = Comment.objects.filter(lft=obj.id)
+        print children
+        child = ChildCommentSerializer(children, many=True)
+        return child
+
+
+class TopLevelCommentSerializer(serializers.Serializer):
+    class Meta:
+        model = Comment
 
 
 class LinkSerializer(serializers.ModelSerializer):
     comments = serializers.SerializerMethodField()
     posted_by = serializers.SerializerMethodField()
+    group = serializers.StringRelatedField()
+    score = serializers.SerializerMethodField()
 
     class Meta:
         model = Link
-        fields = ('id', 'title', 'url', 'posted_by', 'comments',)
+        fields = ('id', 'title', 'url', 'created_at', 'posted_by', 'group', 'flag', 'score', 'comments',)
 
     def get_posted_by(self, obj):
         return obj.posted_user.username
@@ -57,3 +70,9 @@ class LinkSerializer(serializers.ModelSerializer):
         all_comments = Comment.objects.filter(link=obj, parent__isnull=True)
         serializer = CommentSerializer(all_comments, many=True)
         return serializer.data
+
+    def get_score(self, obj):
+        up_votes = Vote.objects.filter(link=obj).filter(up_vote=True).count()
+        down_votes = Vote.objects.filter(link=obj).filter(up_vote=False).count()
+        score = up_votes - down_votes
+        return score
