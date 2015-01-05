@@ -1,13 +1,15 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from feed.v1.urls import router
-
+from peer_post import settings
+from django.conf.urls.static import static
 
 urlpatterns = patterns('',
     # django rest framework
     # url(r'^api/v1/', include('feed.v1.urls', namespace='v1')),
     url(r'^api/v1/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
+    url(r'^home/', 'feed.views.index', name='index'),
     url(r'^admin/', include(admin.site.urls)),
 )
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
