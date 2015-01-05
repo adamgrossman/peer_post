@@ -9,7 +9,7 @@ class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = ('id', 'username', 'first_name', 'last_name', 'profile_photo', 'bio', 'date_joined', 'posted', 'comments',)
+        fields = ('id', 'username', 'first_name', 'last_name', 'profile_photo', 'bio', 'date_joined', 'posted', 'comments')
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -20,35 +20,37 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'description', 'created_at', 'links')
 
     def get_links(self, obj):
-        # values list for list
         return Link.objects.filter(group=obj).values_list('url', 'title', 'description', 'created_at', 'posted_user')
-        # values for dict
-        # return Link.objects.filter(group=obj).values('url', 'title', 'description', 'created_at', 'posted_user')
 
 
 class CommentSerializer(serializers.ModelSerializer):
     author_name = serializers.SerializerMethodField()
-    # link = serializers.SerializerMethodField()
+    children = serializers.SerializerMethodField()
+    created_at = serializers.DateTimeField(format="%m/%d/%Y")
 
     class Meta:
         model = Comment
-        # fields = ('id', 'created_at', 'body', 'link', 'author_name', 'parent',)
-        fields = ('id', 'created_at', 'body', 'author_name', 'parent',)
+        fields = ('id', 'created_at', 'body', 'author_name', 'parent', 'children')
 
     def get_author_name(self, obj):
         return obj.author.username
 
-    # def get_link(self, obj):
-    #     return obj.link.title
+    def get_children(self, obj):
+        children = Comment.objects.filter(lft=obj.id)
+        child = CommentSerializer(children, many=True)
+        return child.data
 
 
 class LinkSerializer(serializers.ModelSerializer):
     comments = serializers.SerializerMethodField()
     posted_by = serializers.SerializerMethodField()
+    group = serializers.StringRelatedField()
+    score = serializers.SerializerMethodField()
+    created_at = serializers.DateTimeField(format="%m/%d/%Y")
 
     class Meta:
         model = Link
-        fields = ('id', 'title', 'url', 'posted_by', 'comments',)
+        fields = ('id', 'title', 'url', 'created_at', 'posted_by', 'group', 'flag', 'score', 'comments',)
 
     def get_posted_by(self, obj):
         return obj.posted_user.username
@@ -57,3 +59,9 @@ class LinkSerializer(serializers.ModelSerializer):
         all_comments = Comment.objects.filter(link=obj, parent__isnull=True)
         serializer = CommentSerializer(all_comments, many=True)
         return serializer.data
+
+    def get_score(self, obj):
+        up_votes = Vote.objects.filter(link=obj).filter(up_vote=True).count()
+        down_votes = Vote.objects.filter(link=obj).filter(up_vote=False).count()
+        score = up_votes - down_votes
+        return score
