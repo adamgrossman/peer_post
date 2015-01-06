@@ -1,11 +1,29 @@
+import facebook
 from django.shortcuts import render, redirect
 from feed.forms import CustomUserCreationForm
 
 
 def index(request):
-    # data = {'logged_in_user': request.user}
-    # return render(request, 'index.html', data)
-    return render(request, 'index.html')
+    if request.user.is_authenticated():
+        user_social_auth = request.user.social_auth.filter(provider='facebook').first()
+        if user_social_auth is not None:
+            graph = facebook.GraphAPI(user_social_auth.extra_data['access_token'])
+            profile_data = graph.get_object("me")
+            picture_data = graph.get_object("me/picture", width=200)
+            data = {
+                'profile': profile_data,
+                'profile_photo': picture_data
+            }
+            print picture_data
+            return render(request, 'index.html', data)
+        else:
+            data = {
+                'profile_photo': request.user.profile_photo
+            }
+            return render(request, 'index.html', data)
+    else:
+        print "else working"
+        return render(request, 'index.html')
 
 
 def register(request):
@@ -18,4 +36,3 @@ def register(request):
         form = CustomUserCreationForm()
     data = {'form': form}
     return render(request, 'registration/register.html', data)
-

@@ -7,7 +7,7 @@ from mptt.fields import TreeForeignKey
 
 class Member(AbstractUser):
     profile_photo = models.ImageField(upload_to='member_photos', blank=True, null=True)
-    bio = models.TextField()
+    bio = models.TextField(blank=True, null=True)
 
     def __unicode__(self):
         return u'{}'.format(self.username)
