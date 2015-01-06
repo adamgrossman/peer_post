@@ -7,11 +7,19 @@
     height: 10vh;
     border-bottom: 1px solid #43ac6a;
     border-right: 1px solid #d3d3d3;
+    width: 70%
 }
 
 .main-panel {
     height: 90vh;
     border-right: 1px solid #d3d3d3;
+    width: 55%
+}
+
+.left-panel {
+    height: 90vh;
+    border-right: 1px solid #d3d3d3;
+    width: 15%
 }
 
 .inprogress {

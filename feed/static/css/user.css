@@ -1,0 +1,31 @@
+.user-panel {
+    height: 90vh;
+    overflow-y: scroll;
+    width: 30%;
+}
+
+input {
+    width: 350px;
+}
+
+.profile-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.user-info {
+    width: 100%;
+    font-size: 13px;
+}
+
+tr {
+    font-size: 12px;
+    height: 25px;
+    border-bottom: 1px dashed #d3d3d3;
+}
+
+th {
+    width: 90px;
+}
