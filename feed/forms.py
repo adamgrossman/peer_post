@@ -1,11 +1,13 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.forms import TextInput
 from feed.models import Member
 
 
 class CustomUserCreationForm(UserCreationForm):
-    first_name = forms.CharField(required=True)
-    last_name = forms.CharField(required=True)
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'register-form'}), required=True)
+    # last_name = forms.CharField(required=True)
+    bio = forms.CharField(widget=forms.Textarea(attrs={'cols': 36, 'rows': 3}))
 
     class Meta:
         model = Member

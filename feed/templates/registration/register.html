@@ -1,10 +1,17 @@
 {% extends "index.html" %}
 
-{% block users %}
-    <form method="post" action="." enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
+{% block label %}
+    <h3>Register</h3>
+{% endblock label %}
 
-        <input type="submit" value="Submit"/>
+{% block users %}
+    <form class="form-horizontal" role="form" method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+            <h4>{{ field.label_tag }}</h4>
+            <div>{{ field }}</div>
+        {% endfor %}
+        <br>
+        <button type="submit" value="Submit" class="btn btn-success btn-block">Register</button>
     </form>
 {% endblock users %}

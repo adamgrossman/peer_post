@@ -18,6 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
     <link rel="stylesheet" href="{% static "css/layout.css" %}">
+    <link rel="stylesheet" href="{% static "css/user.css" %}">
 
 </head>
 <body>
@@ -28,23 +29,68 @@
                 TOP ROW MAIN
             </div>
             <div class="col-md-3">
-                TOP ROW RIGHT
+            {% if user.is_authenticated %}
+                <h3>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h3>
+            {% else %}
+                {% block label %}
+                {% endblock label %}
+            {% endif %}
             </div>
         </div>
         <!-- Main Panels -->
         <div class="row">
+
             <!-- Left Panel -->
-            <div class="col-md-2 main-panel">
+            <div class="col-md-2 left-panel">
                 LEFT
+                <div ng-app="peer_post">
+                    <div ng-view>
+
+                    </div>
+                </div>
             </div>
             <!-- Middle Panel -->
             <div class="col-md-7 main-panel">
                 MID
             </div>
+
             <!-- Right Panel -->
-            <div class="col-md-3 main-panel">
+            <div class="col-md-3 user-panel">
                 {% block users %}
-                    REGISTER
+                    {% if user.is_authenticated %}
+
+
+                        <br>
+                        <img class="profile-photo" src="{% static user.profile_photo.url %}" alt=""/>
+{#                        <h4>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h4>#}
+{#                        <h5>Member since: {{ user.date_joined | date:"M d, Y" }}</h5>#}
+{#                        <h5>{{ user.bio }}</h5>#}
+                        <br>
+                        <br>
+
+                        <table class="user-info">
+                            <tr>
+                                <th>Basic Information</th>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <th>First Name</th>
+                                <td>{{ user.first_name | capfirst }}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td>{{ user.last_name | capfirst }}</td>
+                            </tr>
+                            <tr>
+                                <td>Bio</td>
+                                <td>{{ user.bio }}</td>
+                            </tr>
+                        </table>
+                        <h6><a href="{% url 'logout' %}">Log out</a></h6>
+                    {% else %}
+                        <h3><a href="{% url 'login' %}">Log in now!</a></h3>
+                        <h3>Not a member? <a href="{% url 'register' %}">Register now!</a></h3>
+                    {% endif %}
                 {% endblock users %}
             </div>
         </div>

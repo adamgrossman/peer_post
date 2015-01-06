@@ -13,7 +13,7 @@ def register(request):
         form = CustomUserCreationForm(request.POST, request.FILES)
         if form.is_valid():
             if form.save():
-                return redirect('index')
+                return redirect('login')
     else:
         form = CustomUserCreationForm()
     data = {'form': form}
