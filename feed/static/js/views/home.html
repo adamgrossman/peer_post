@@ -4,10 +4,35 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-2 col-xs-2 left-panel">
-
+    <div class="col-sm-3 col-xs-3 left-panel">
+        <br>
+        <h4>All groups:</h4>
+        <div ng-repeat="group in allGroups">
+            <hr>
+            <h4>{{ group.title }}</h4>
+            <h6>{{ group.description }}</h6>
+        </div>
     </div>
-    <div class="col-sm-10 col-xs-10 main-panel">
-
+    <div class="col-sm-9 col-xs-9 main-panel">
+        <br>
+        <h4>All links:</h4>
+        <div ng-repeat="link in allLinks">
+            <div class="row">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <h5>{{ link.score }}</h5>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+                <div class="col-sm-9">
+                    <h4>{{ link.title }}</h4>
+                    <h6>{{ link.url }}</h6>
+                    <h6>{{ link.description }}</h6>
+                </div>
+                <div class="col-sm-2">
+                    <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                </div>
+            </div>
+            <hr>
+        </div>
     </div>
 </div>

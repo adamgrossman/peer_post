@@ -50,7 +50,7 @@ class LinkSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Link
-        fields = ('id', 'title', 'url', 'created_at', 'posted_by', 'group', 'flag', 'score', 'comments',)
+        fields = ('id', 'title', 'url', 'created_at', 'description', 'posted_by', 'group', 'flag', 'score', 'comments',)
 
     def get_posted_by(self, obj):
         return obj.posted_user.username

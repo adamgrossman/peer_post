@@ -13,13 +13,13 @@
 .main-panel {
     height: 90vh;
     border-right: 1px solid #d3d3d3;
-    width: 75%
+    /*width: 75%*/
 }
 
 .left-panel {
     height: 90vh;
     border-right: 1px solid #d3d3d3;
-    width: 25%
+    /*width: 25%*/
 }
 
 .angular-panel {
