@@ -1,11 +1,7 @@
 {% extends "index.html" %}
 
-{% block label %}
-    <h3>Login</h3>
-{% endblock label %}
-
-
 {% block users %}
+    <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
         {% for field in form %}

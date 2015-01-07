@@ -15,59 +15,44 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="{% static "js/vendors/angular-ui/ui-bootstrap-tpls-0.11.2.min.js" %}"></script>
 
+    <!-- JavaScript -->
+    <script src="{% static "js/app.js" %}"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
     <link rel="stylesheet" href="{% static "css/layout.css" %}">
     <link rel="stylesheet" href="{% static "css/user.css" %}">
+    <link rel="stylesheet" href="{% static "css/angular-styling.css" %}">
 
+    <!------- Controllers ------->
+    <script src="{% static "js/controllers/homeController.js" %}"></script>
+
+    <script type="text/javascript">
+
+</script>
 </head>
 <body>
     <div id="page-layout" class="container">
         <div class="row">
-            <!-- Top Row -->
-            <div class="col-md-9 top-row">
-                TOP ROW MAIN
-            </div>
-            <div class="col-md-3">
-            {% if user.is_authenticated %}
-                <h2>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h2>
-            {% else %}
-                {% block label %}
-                {% endblock label %}
-            {% endif %}
-            </div>
-        </div>
-        <!-- Main Panels -->
-        <div class="row">
-
-            <!-- Left Panel -->
-            <div class="col-md-2 left-panel">
-                LEFT
-                <div ng-app="peer_post">
+            <!-- Angular Panels -->
+            <div ng-app="peer_post">
+                <div class="col-md-9 col-sm-8 col-xs-12 angular-panel">
                     <div ng-view>
-
                     </div>
                 </div>
             </div>
-            <!-- Middle Panel -->
-            <div class="col-md-7 main-panel">
-                MID
-            </div>
 
-            <!-- Right Panel -->
-            <div class="col-md-3 user-panel">
+            <!-- User Panel -->
+            <div align="center" class="col-md-3 col-sm-4 hidden-xs user-panel">
                 {% block users %}
                     {% if user.is_authenticated %}
+                        <h2>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h2>
                         <br>
                         <img class="profile-photo" src="{{ profile_photo.url }}">
                         <br>
+                        Basic Information
                         <br>
-
                         <table class="user-info">
-                            <tr>
-                                <th>Basic Information</th>
-                                <td> </td>
-                            </tr>
                             <tr>
                                 <th>First Name</th>
                                 <td>{{ user.first_name | capfirst }}</td>

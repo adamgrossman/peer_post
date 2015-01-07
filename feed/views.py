@@ -9,7 +9,7 @@ def index(request):
         if user_social_auth is not None:
             graph = facebook.GraphAPI(user_social_auth.extra_data['access_token'])
             profile_data = graph.get_object("me")
-            picture_data = graph.get_object("me/picture", width=200)
+            picture_data = graph.get_object("me/picture", width=180)
             data = {
                 'profile': profile_data,
                 'profile_photo': picture_data
