@@ -4,6 +4,10 @@
     /*width: 30%;*/
 /*}*/
 
+#logged_id {
+    display: none;
+}
+
 .user-panel {
     height: 100vh;
     overflow-y: scroll;

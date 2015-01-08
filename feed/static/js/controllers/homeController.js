@@ -1,9 +1,8 @@
-function homeController($scope, $http, GroupFactory, LinkFactory, $cookieStore) {
+function homeController($scope, $http, GroupFactory, LinkFactory) {
 
-//    var current = user.current;
-    console.log(logged_in_user);
+//    Logged in user
+    var logged_user = document.getElementById('logged_id').innerHTML;
 
-//    GROUPS
 //    Get groups
     GroupFactory.getGroups(function(response) {
         $scope.allGroups = response;
@@ -12,7 +11,6 @@ function homeController($scope, $http, GroupFactory, LinkFactory, $cookieStore) 
 
 //    Create group
     $scope.newGroup = function() {
-
         var data = {
             "title": $scope.newGroupName,
             "description": $scope.newGroupDesc
@@ -26,8 +24,6 @@ function homeController($scope, $http, GroupFactory, LinkFactory, $cookieStore) 
         $scope.createNewGroup = false;
     };
 
-
-//    LINKS
 //    Get links
     LinkFactory.getLinks(function(response) {
         $scope.allLinks = response;
@@ -36,7 +32,6 @@ function homeController($scope, $http, GroupFactory, LinkFactory, $cookieStore) 
 
 //    Create link
     $scope.newLink = function () {
-
         var group_id = $scope.newLinkGroup.id;
         console.log(group_id);
 
@@ -44,15 +39,15 @@ function homeController($scope, $http, GroupFactory, LinkFactory, $cookieStore) 
             "url": $scope.newLinkUrl,
             "title": $scope.newLinkTitle,
             "description": $scope.newLinkDesc,
-            "group": group_id
-//            "group": group_id,
-//            "posted_user": 3
+            "group": group_id,
+            "posted_user": logged_user
         };
 
         LinkFactory.newLink(data, function(response) {
             $scope.allLinks.push(response);
             LinkFactory.linksList = $scope.allLinks;
-        })
-    }
+        });
 
+        $scope.createNewLink = false;
+    }
 }
