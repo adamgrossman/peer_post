@@ -12,12 +12,14 @@ def index(request):
             picture_data = graph.get_object("me/picture", width=180)
             data = {
                 'profile': profile_data,
-                'profile_photo': picture_data
+                'profile_photo': picture_data,
+                'user_id': request.user.id
             }
             return render(request, 'index.html', data)
         else:
             data = {
-                'profile_photo': request.user.profile_photo
+                'profile_photo': request.user.profile_photo,
+                'user_id': request.user.id
             }
             return render(request, 'index.html', data)
     else:

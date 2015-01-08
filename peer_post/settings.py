@@ -26,13 +26,13 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
     'feed',
     'mptt',
     "rest_framework",
+    'djangular',
     'social.apps.django_app.default',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -95,6 +95,23 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'index'
+
+# REST FRAMEWORK
+REST_FRAMEWORK = {
+    # 'PAGINATE_BY': 5,
+    # 'DEFAULT_FILTER_BACKENDS': (
+    #     'rest_framework.filters.DjangoFilterBackend',
+    # ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    # )
+    # 'PAGINATE_BY_PARAM': 'page_size',  # Allow client to override, using `?page_size=xxx`.
+}
 
 try:
     from local_settings import *

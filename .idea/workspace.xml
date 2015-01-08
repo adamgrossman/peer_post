@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd263e09-1c06-4643-aa01-b95fc67fc8d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/css/angular-styling.css" afterPath="$PROJECT_DIR$/feed/static/css/angular-styling.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/js/app.js" afterPath="$PROJECT_DIR$/feed/static/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/js/factories/groupFactory.js" afterPath="$PROJECT_DIR$/feed/static/js/factories/groupFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/js/views/home.html" afterPath="$PROJECT_DIR$/feed/static/js/views/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/js/controllers/homeController.js" afterPath="$PROJECT_DIR$/feed/static/js/controllers/homeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/templates/index.html" afterPath="$PROJECT_DIR$/feed/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/css/layout.css" afterPath="$PROJECT_DIR$/feed/static/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/js/factories/linksFactory.js" afterPath="$PROJECT_DIR$/feed/static/js/factories/linksFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/models.py" afterPath="$PROJECT_DIR$/feed/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/v1/api/serializers.py" afterPath="$PROJECT_DIR$/feed/v1/api/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peer_post/settings.py" afterPath="$PROJECT_DIR$/peer_post/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peer_post/urls.py" afterPath="$PROJECT_DIR$/peer_post/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/views.py" afterPath="$PROJECT_DIR$/feed/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/v1/api/views.py" afterPath="$PROJECT_DIR$/feed/v1/api/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="peer_post.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,21 +37,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peer_post/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.291667" vertical-offset="53" max-vertical-offset="1350">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+              <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/static/js/app.js">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.58984375" vertical-offset="258" max-vertical-offset="1288">
+              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feed/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,49 +70,41 @@
       <file leaf-file-name="homeController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/static/js/controllers/homeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linksFactory.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/static/js/factories/linksFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groupFactory.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/static/js/factories/groupFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/static/js/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51687115" vertical-offset="8" max-vertical-offset="660">
-              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="930">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-styling.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/static/css/angular-styling.css">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peer_post/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="2100">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feed/v1/api/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="765">
+              <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,8 +112,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/v1/api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="404" max-vertical-offset="1080">
-              <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1155">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,8 +122,18 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="448" max-vertical-offset="1035">
+              <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linksFactory.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feed/static/js/factories/linksFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -140,26 +159,26 @@
         <option value="$PROJECT_DIR$/feed/v1/urls.py" />
         <option value="$PROJECT_DIR$/feed/admin.py" />
         <option value="$USER_HOME$/.virtualenvs/peer_post/lib/python2.7/site-packages/rest_framework/serializers.py" />
-        <option value="$PROJECT_DIR$/feed/v1/api/views.py" />
         <option value="$PROJECT_DIR$/feed/registration/register.html" />
         <option value="$PROJECT_DIR$/feed/forms.py" />
-        <option value="$PROJECT_DIR$/feed/models.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/feed/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/peer_post/settings.py" />
-        <option value="$PROJECT_DIR$/feed/static/js/app.js" />
         <option value="$PROJECT_DIR$/feed/templates/registration/register.html" />
-        <option value="$PROJECT_DIR$/peer_post/urls.py" />
-        <option value="$PROJECT_DIR$/feed/views.py" />
         <option value="$PROJECT_DIR$/feed/static/css/user.css" />
         <option value="$PROJECT_DIR$/feed/static/css/layout.css" />
+        <option value="$PROJECT_DIR$/feed/static/css/angular-styling.css" />
+        <option value="$PROJECT_DIR$/feed/static/js/app.js" />
         <option value="$PROJECT_DIR$/feed/static/js/factories/groupFactory.js" />
         <option value="$PROJECT_DIR$/feed/static/js/factories/linksFactory.js" />
-        <option value="$PROJECT_DIR$/feed/templates/index.html" />
-        <option value="$PROJECT_DIR$/feed/static/js/controllers/homeController.js" />
+        <option value="$PROJECT_DIR$/feed/v1/api/views.py" />
+        <option value="$PROJECT_DIR$/peer_post/urls.py" />
+        <option value="$PROJECT_DIR$/feed/models.py" />
         <option value="$PROJECT_DIR$/feed/v1/api/serializers.py" />
-        <option value="$PROJECT_DIR$/feed/static/css/angular-styling.css" />
         <option value="$PROJECT_DIR$/feed/static/js/views/home.html" />
+        <option value="$PROJECT_DIR$/peer_post/settings.py" />
+        <option value="$PROJECT_DIR$/feed/views.py" />
+        <option value="$PROJECT_DIR$/feed/static/js/controllers/homeController.js" />
+        <option value="$PROJECT_DIR$/feed/templates/index.html" />
       </list>
     </option>
   </component>
@@ -332,11 +351,11 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Bootcamp/Projects/classtracker" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="models&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;set&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;url&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;sett&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;login&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/login.html&#10;regi&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;user&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/user.css&#10;settin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;urls&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;views&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/views.py&#10;mode&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;setting&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;reg&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;model&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;seria&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;regis&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;admin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/admin.py&#10;setti&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py" />
+    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/views/home.html&#10;urls&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;setting&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;sett&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;views&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/views.py&#10;seri&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;models&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;set&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;url&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;login&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/login.html&#10;regi&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;user&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/user.css&#10;settin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;mode&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;reg&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;model&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;seria&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;regis&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;admin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/admin.py&#10;setti&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -585,7 +604,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17265625" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19602273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19602273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -757,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed/v1/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63339734" vertical-offset="0" max-vertical-offset="521">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/peer_post/lib/python2.7/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.097426474" vertical-offset="5092" max-vertical-offset="7215">
@@ -795,26 +807,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peer_post/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2472119" vertical-offset="1307" max-vertical-offset="1845">
-          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.087548636" vertical-offset="0" max-vertical-offset="514">
           <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26213592" vertical-offset="0" max-vertical-offset="600">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -835,38 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peer_post/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5576208" vertical-offset="0" max-vertical-offset="538">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/v1/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="404" max-vertical-offset="1080">
-          <caret line="52" column="68" selection-start-line="52" selection-start-column="68" selection-end-line="52" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed/static/fonts/glyphicons-halflings-regular.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.234375" vertical-offset="0" max-vertical-offset="3510">
@@ -875,34 +839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/feed/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.291667" vertical-offset="53" max-vertical-offset="1350">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/static/js/controllers/homeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/static/js/factories/linksFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/static/js/factories/groupFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -915,10 +855,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/feed/static/js/factories/groupFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peer_post/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/v1/api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="765">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/v1/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1155">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="448" max-vertical-offset="1035">
+          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/static/js/factories/linksFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feed/static/js/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51687115" vertical-offset="8" max-vertical-offset="660">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="930">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peer_post/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="2100">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/static/js/controllers/homeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58984375" vertical-offset="258" max-vertical-offset="1288">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
           <folding />
         </state>
       </provider>

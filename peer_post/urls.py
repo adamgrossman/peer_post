@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     # url(r'^api/v1/', include('feed.v1.urls', namespace='v1')),
     url(r'^api/v1/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^oauth2/', include('provider.oauth2.urls', namespace='oauth2')),
     url('', include('social.apps.django_app.urls', namespace='social')),
 
 
