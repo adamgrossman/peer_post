@@ -1,0 +1,32 @@
+#page-layout {
+    width: 100%;
+    margin: 0;
+}
+
+.top-row {
+    height: 10vh;
+    border-bottom: 1px solid #43ac6a;
+    border-right: 1px solid #d3d3d3;
+    /*width: 100%*/
+}
+
+.main-panel {
+    height: 90vh;
+    border-right: 1px solid #d3d3d3;
+    /*width: 75%*/
+}
+
+.left-panel {
+    height: 90vh;
+    border-right: 1px solid #d3d3d3;
+    /*width: 25%*/
+}
+
+.angular-panel {
+    height: 100vh;
+    /*width: 70%;*/
+}
+
+.inprogress {
+    border: 1px solid red;
+}

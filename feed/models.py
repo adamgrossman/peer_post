@@ -7,7 +7,7 @@ from mptt.fields import TreeForeignKey
 
 class Member(AbstractUser):
     profile_photo = models.ImageField(upload_to='member_photos', blank=True, null=True)
-    bio = models.TextField()
+    bio = models.TextField(blank=True, null=True)
 
     def __unicode__(self):
         return u'{}'.format(self.username)
@@ -17,7 +17,7 @@ class Group(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    member = models.ManyToManyField(Member, related_name="subscriber")
+    member = models.ManyToManyField(Member, related_name="subscriber", blank=True, null=True)
 
     def __unicode__(self):
         return u'{}'.format(self.title)

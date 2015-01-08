@@ -1,0 +1,86 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Peer Post</title>
+
+    <!------- Angular ------->
+    <script src="{% static "js/vendors/angular/angular.js" %}"></script>
+    <script src="{% static "js/vendors/angular/angular-route.js" %}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-cookies.js"></script>
+
+    <!------- Bootstrap ------->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="{% static "js/vendors/angular-ui/ui-bootstrap-tpls-0.11.2.min.js" %}"></script>
+
+    <!-- JavaScript -->
+    <script src="{% static "js/app.js" %}"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/layout.css" %}">
+    <link rel="stylesheet" href="{% static "css/user.css" %}">
+    <link rel="stylesheet" href="{% static "css/angular-styling.css" %}">
+
+    <!------- Factories ------->
+    <script src="{% static "js/factories/groupFactory.js" %}"></script>
+    <script src="{% static "js/factories/linksFactory.js" %}"></script>
+
+    <!------- Controllers ------->
+    <script src="{% static "js/controllers/homeController.js" %}"></script>
+
+    <script type="text/javascript"></script>
+
+    <script>
+        var logged_in_user = {{ user_id }};
+    </script>
+
+</head>
+<body>
+    <div id="page-layout" class="container">
+        <div class="row">
+            <!-- Angular Panels -->
+            <div ng-app="peer_post">
+                <div class="col-md-8 col-sm-8 col-xs-12 angular-panel">
+                    <div ng-view>
+                    </div>
+                </div>
+            </div>
+            <!-- User Panel -->
+            <div align="center" class="col-md-4 col-sm-4 hidden-xs user-panel">
+                {% block users %}
+                    {% if user.is_authenticated %}
+                        <h2>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h2>
+                        <br>
+                        <img class="profile-photo" src="{{ profile_photo.url }}">
+                        <br>
+                        Basic Information
+                        <br>
+                        <table class="user-info">
+                            <tr>
+                                <th>First Name</th>
+                                <td>{{ user.first_name | capfirst }}</td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td>{{ user.last_name | capfirst }}</td>
+                            </tr>
+                            <tr>
+                                <td>Bio</td>
+                                <td>{{ user.bio }}</td>
+                            </tr>
+                        </table>
+                        <h6><a href="{% url 'logout' %}">Log out</a></h6>
+                    {% else %}
+                        <h3><a href="{% url 'login' %}">Log in now!</a></h3>
+                        <a href="{% url "social:begin" "facebook" %}">Facebook Login</a>
+                        <h3>Not a member? <a href="{% url 'register' %}">Register now!</a></h3>
+                    {% endif %}
+                {% endblock users %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

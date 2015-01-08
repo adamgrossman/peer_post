@@ -1,0 +1,15 @@
+.title {
+    display: inline-block;
+    color: #008cba
+}
+
+.title > .fa {
+    font-size: 24px;
+    margin-left: 3px;
+}
+
+.glyphicon-flag {
+    color: lightcoral;
+    font-size: 14px;
+    margin-top: 30%;
+}
