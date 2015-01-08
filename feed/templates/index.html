@@ -33,10 +33,6 @@
 
     <script type="text/javascript"></script>
 
-    <script>
-        var logged_in_user = {{ user_id }};
-    </script>
-
 </head>
 <body>
     <div id="page-layout" class="container">
@@ -53,12 +49,17 @@
                 {% block users %}
                     {% if user.is_authenticated %}
                         <h2>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h2>
+                        <p id="logged_id">{{ user.id }}</p>
                         <br>
                         <img class="profile-photo" src="{{ profile_photo.url }}">
                         <br>
                         Basic Information
                         <br>
                         <table class="user-info">
+                            <tr>
+                                <th>Username</th>
+                                <td>{{ user.username }}</td>
+                            </tr>
                             <tr>
                                 <th>First Name</th>
                                 <td>{{ user.first_name | capfirst }}</td>
