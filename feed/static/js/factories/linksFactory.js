@@ -40,7 +40,6 @@ peer_post.factory('LinkFactory', function ($http) {
                 .error(function (error) {
                     console.log(error)
                 })
-
         }
     }
 });

@@ -2,11 +2,6 @@
     display: none;
 }
 
-.user-panel {
-    height: 100vh;
-    overflow-y: scroll;
-}
-
 input {
     width: 350px;
 }

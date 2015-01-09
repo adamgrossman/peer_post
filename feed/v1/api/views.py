@@ -44,5 +44,8 @@ class LinkViewSet(viewsets.ModelViewSet):
     def flag(self, request, pk):
         link = Link.objects.get(pk=pk)
         link.flag += 1
-        link.save()
+        if link.flag >= 10:
+            link.delete()
+        else:
+            link.save()
         return Response(status=status.HTTP_200_OK)

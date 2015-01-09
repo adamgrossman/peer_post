@@ -14,19 +14,6 @@
     margin-top: 30%;
 }
 
-.link-info {
-    padding: 5px 5px 5px 2%;
-    margin-left: -3%;
-    margin-right: -10%;
-}
-
-.score-div {
-    width: 50%;
-    margin: 0 auto;
-    padding-top: 10px;
-    font-size: 18px;
-}
-
 .even {
     background-color: white;
 }
@@ -35,13 +22,34 @@
     background-color: #f4f4f4;
 }
 
+.arrows {
+    font-size: 20px;
+}
+
 #top-arrow {
-    padding-left: 1px;
+    padding-left: 2px;
 }
 
 #score {
     display: inline-block;
     font-size: 18px;
-    padding-left: 4px;
-    padding-bottom: 2px;
+    padding-left: 6px;
+    margin-top: -20px;
+}
+
+#submit-link-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.search-filters {
+    /*display: inline-block;*/
+    /*padding-top: 35px;*/
+    /*padding-bottom: 5px;*/
+    /*margin-top: 20px;*/
+    /*padding-right: 5%;*/
+    padding-left: 5%;
 }

@@ -6,12 +6,18 @@
 .top-row {
     height: 10vh;
     border-bottom: 1px solid #43ac6a;
-    border-right: 1px solid #d3d3d3;
+    position: relative;
+
+}
+
+.user-panel {
+    height: 100vh;
+    overflow-y: scroll;
+    border-left: 1px solid #d3d3d3;
 }
 
 .main-panel {
     height: 90vh;
-    border-right: 1px solid #d3d3d3;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -23,5 +29,16 @@
 
 .angular-panel {
     height: 100vh;
-    /*overflow-y: hidden;*/
+}
+
+.link-info {
+    padding: 5px 5px 5px 2%;
+    margin-left: -3%;
+    margin-right: -10%;
+}
+
+.score-div {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
 }
