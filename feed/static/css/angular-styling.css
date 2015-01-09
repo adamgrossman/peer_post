@@ -13,3 +13,35 @@
     font-size: 14px;
     margin-top: 30%;
 }
+
+.link-info {
+    padding: 5px 5px 5px 2%;
+    margin-left: -3%;
+    margin-right: -10%;
+}
+
+.score-div {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.even {
+    background-color: white;
+}
+
+.odd {
+    background-color: #f4f4f4;
+}
+
+#top-arrow {
+    padding-left: 1px;
+}
+
+#score {
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}

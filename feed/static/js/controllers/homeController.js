@@ -1,8 +1,5 @@
 function homeController($scope, $http, GroupFactory, LinkFactory) {
 
-//    Logged in user
-    var logged_user = document.getElementById('logged_id').innerHTML;
-
 //    Get groups
     GroupFactory.getGroups(function(response) {
         $scope.allGroups = response;
@@ -25,21 +22,25 @@ function homeController($scope, $http, GroupFactory, LinkFactory) {
     };
 
 //    Get links
-    LinkFactory.getLinks(function(response) {
-        $scope.allLinks = response;
-        LinkFactory.linksList = $scope.allLinks;
-    });
+    function get_links() {
+        LinkFactory.getLinks(function(response) {
+            $scope.allLinks = response;
+            LinkFactory.linksList = $scope.allLinks;
+        });
+    }
+
+    get_links();
 
 //    Create link
     $scope.newLink = function () {
-        var group_id = $scope.newLinkGroup.id;
-        console.log(group_id);
+        //    Logged in user id
+        var logged_user = document.getElementById('logged_id').innerHTML;
 
         var data = {
             "url": $scope.newLinkUrl,
             "title": $scope.newLinkTitle,
             "description": $scope.newLinkDesc,
-            "group": group_id,
+            "group": $scope.newLinkGroup.id,
             "posted_user": logged_user
         };
 
@@ -49,5 +50,26 @@ function homeController($scope, $http, GroupFactory, LinkFactory) {
         });
 
         $scope.createNewLink = false;
-    }
+    };
+
+    $scope.upVote = function (link) {
+        var link_id = link.id;
+        LinkFactory.action(link_id, 1, function() {
+            get_links();
+        });
+    };
+
+    $scope.downVote = function (link) {
+        var link_id = link.id;
+        LinkFactory.action(link_id, 2, function() {
+            get_links();
+        });
+    };
+
+    $scope.flag = function (link) {
+        var link_id = link.id;
+        LinkFactory.action(link_id, 3, function() {
+            get_links();
+        });
+    };
 }

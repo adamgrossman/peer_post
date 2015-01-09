@@ -32,23 +32,24 @@
             <select ng-model="newLinkGroup" ng-options="group as group.title for group in allGroups"><option value="">Choose group</option></select>
             <button ng-click="newLink()">Submit</button>
         </div>
-        <br>
-        <h4>All links:</h4>
         <div ng-repeat="link in allLinks">
-            <hr>
-            <div class="row">
-                <div class="col-xs-1">
-                    <span class="glyphicon glyphicon-chevron-up"></span>
-                    <h5>{{ link.score }}</h5>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                </div>
-                <div class="col-xs-9">
-                    <h4>{{ link.title }}</h4>
-                    <h6>{{ link.url }}</h6>
-                    <h6>{{ link.description }}</h6>
-                </div>
-                <div class="col-xs-2">
-                    <span class="glyphicon glyphicon-flag"></span>
+            <div class="link-info" ng-class-odd="'odd'" ng-class-even="'even'">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <div class="score-div">
+                            <span class="glyphicon glyphicon-chevron-up arrows" id="top-arrow" ng-click="upVote(link)"></span>
+                            <span id="score">{{ link.score }}</span>
+                            <span class="glyphicon glyphicon-chevron-down arrows" ng-click="downVote(link)"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-9">
+                        <h4>{{ link.title }} <span class="small">({{ link.url }})</span></h4>
+                        <h5>{{ link.description }}</h5>
+                        <h6 class="small">Posted by <i>{{ link.user_name }}</i> to <b>{{ link.group_name }}</b> on {{ link.created_at | date:'MM-dd-yyyy' }} | {{ link.comments.length }} comments</h6>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="glyphicon glyphicon-flag" ng-click="flag(link)"></span>
+                    </div>
                 </div>
             </div>
         </div>
