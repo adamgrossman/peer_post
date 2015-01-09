@@ -37,12 +37,9 @@
     margin-top: -20px;
 }
 
-#submit-link-button {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.submit-main {
+    padding: 5px 40px;
     margin-top: 20px;
-    padding-right: 40px;
-    padding-left: 40px;
 }
 
 .search-filters {
@@ -52,4 +49,24 @@
     /*margin-top: 20px;*/
     /*padding-right: 5%;*/
     padding-left: 5%;
+}
+
+.accordion {
+    cursor: pointer;
+}
+
+.color0 {
+    color: Black;
+}
+
+.color1 {
+    color: Blue;
+}
+
+.color2 {
+    color: #1cac19;
+}
+
+.color3 {
+    color: lightcoral;
 }
