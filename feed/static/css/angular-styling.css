@@ -70,3 +70,12 @@
 .color3 {
     color: lightcoral;
 }
+
+.create-div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.create-div > input {
+    width: 182px;
+}

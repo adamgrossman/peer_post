@@ -22,13 +22,9 @@
                     {{ group.description }}
                 </accordion-group>
             </accordion>
-            <!--
-            <h4>{{ group.title }}</h4>
-            <h6>{{ group.description }}</h6>
-            -->
         </div>
         <h6 class="small" ng-click="createNewGroup=!createNewGroup">Create new group</h6>
-        <div ng-show="createNewGroup">
+        <div class="create-div" ng-show="createNewGroup">
             <input type="text" ng-model="newGroupName" placeholder="Group name"/>
             <input type="text" ng-model="newGroupDesc" placeholder="Group Description"/>
             <button type="submit" size="xs" ng-click="newGroup()">Submit</button>
@@ -36,28 +32,19 @@
     </div>
     <div class="col-sm-9 col-xs-12 main-panel">
         <div ng-show="createNewLink">
-        <!--
-            <h4>New link:</h4>
-
-            <input type="text" ng-model="newLinkUrl" placeholder="Url"/>
-            <input type="text" ng-model="newLinkDesc" placeholder="Description"/>
-            <select ng-model="newLinkGroup" ng-options="group as group.title for group in allGroups"><option value="">Choose group</option></select>
-            <submit-button class="btn-xs" ng-click="newLink()">Submit</submit-button>
-        </div>
-        -->
-        <div class="row">
-            <div class="col-xs-offset-1 col-xs-7">
-                <input type="text" ng-model="newLinkTitle" placeholder="Title"/>
-                <input type="text" ng-model="newLinkUrl" placeholder="Url"/>
-                <input type="text" ng-model="newLinkDesc" placeholder="Description"/>
+            <div class="row create-div">
+                <div class="col-xs-offset-1 col-xs-7">
+                    <input type="text" ng-model="newLinkTitle" placeholder="Title"/>
+                    <input type="text" ng-model="newLinkUrl" placeholder="Url"/>
+                    <input type="text" ng-model="newLinkDesc" placeholder="Description"/>
+                </div>
+                <div class="col-xs-4">
+                    <select ng-model="newLinkGroup" ng-options="group as group.title for group in allGroups"><option value="">Choose group</option></select>
+                    <br>
+                    <br>
+                    <button type="submit" size="xs" ng-click="newLink()">Submit</button>
+                </div>
             </div>
-            <div class="col-xs-4">
-                <select ng-model="newLinkGroup" ng-options="group as group.title for group in allGroups"><option value="">Choose group</option></select>
-                <br>
-                <br>
-                <button type="submit" size="xs" ng-click="newLink()">Submit</button>
-            </div>
-        </div>
         </div>
 
         <div ng-repeat="link in allLinks">
