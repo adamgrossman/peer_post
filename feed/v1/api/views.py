@@ -1,7 +1,7 @@
 from rest_framework import viewsets, status
-from rest_framework.authentication import SessionAuthentication
+from rest_framework.decorators import detail_route
 from rest_framework.response import Response
-from feed.models import Member, Link, Group, Vote, Comment
+from feed.models import Member, Link, Group, Comment, Vote
 from feed.v1.api.serializers import MemberSerializer, GroupSerializer, CommentSerializer, LinkSerializer
 
 
@@ -21,25 +21,31 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class LinkViewSet(viewsets.ModelViewSet):
-    print "viewset"
     serializer_class = LinkSerializer
     queryset = Link.objects.all()
-    # authentication_classes = (SessionAuthentication,)
 
-    def pre_save(self, obj):
-        print "presave"
-        obj.posted_user = self.request.user.id
-    # def perform_create(self, serializer):
-    #     serializer.save(posted=self.request.user)
-    #
-    # def post(self, request, format=None):
-    #     serializer = LinkSerializer(data=request.data)
-    #     if serializer.is_valid():
-    #         serializer.save()
-    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    @detail_route(methods=['post'])
+    def upvote(self, request, pk):
+        link = Link.objects.get(pk=pk)
+        vote, created = Vote.objects.get_or_create(voter=request.user, link=link)
+        vote.up_vote = True
+        vote.save()
+        return Response(status=status.HTTP_200_OK)
 
+    @detail_route(methods=['post'])
+    def downvote(self, request, pk):
+        link = Link.objects.get(pk=pk)
+        vote, created = Vote.objects.get_or_create(voter=request.user, link=link)
+        vote.up_vote = False
+        vote.save()
+        return Response(status=status.HTTP_200_OK)
 
-    # def perform_create(self, serializer):
-    #     serializer.save(posted_user=self.request.user)
-
+    @detail_route(methods=['post'])
+    def flag(self, request, pk):
+        link = Link.objects.get(pk=pk)
+        link.flag += 1
+        if link.flag >= 10:
+            link.delete()
+        else:
+            link.save()
+        return Response(status=status.HTTP_200_OK)

@@ -44,15 +44,12 @@ class CommentSerializer(serializers.ModelSerializer):
 class LinkSerializer(serializers.ModelSerializer):
     comments = serializers.SerializerMethodField()
     user_name = serializers.SerializerMethodField()
-    # group = serializers.SerializerMethodField()
     group_name = serializers.SerializerMethodField()
     score = serializers.SerializerMethodField()
-    # posted = serializers.ReadOnlyField(source='posted.username')
-    # created_at = serializers.DateTimeField(format="%m/%d/%Y")
 
     class Meta:
         model = Link
-        fields = ('id', 'title', 'url', 'description', 'posted_user', 'user_name', 'group', 'group_name', 'flag', 'score', 'comments',)
+        fields = ('id', 'title', 'url', 'description', 'created_at', 'posted_user', 'user_name', 'group', 'group_name', 'flag', 'score', 'comments',)
 
     def get_user_name(self, obj):
         return obj.posted_user.username
