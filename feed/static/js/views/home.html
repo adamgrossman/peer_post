@@ -11,13 +11,13 @@
 </div>
 <div class="row">
     <div class="col-sm-3 left-panel hidden-xs">
-        <br>
         <h4>All groups:</h4>
+        <br/>
         <div ng-repeat="group in allGroups">
             <accordion ng-class="'accordion'">
                 <accordion-group is-open="status.open">
                     <accordion-heading ng-class="'accordion-header'">
-                        <div ng-class="'color' + ($index % 4)"><h5>{{ group.title }}</h5></div>
+                        <div ng-class="'color' + ($index % 4)"><h5 class="group-title">{{ group.title }}</h5></div>
                     </accordion-heading>
                     {{ group.description }}
                 </accordion-group>
