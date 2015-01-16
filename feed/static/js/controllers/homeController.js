@@ -1,4 +1,4 @@
-function homeController($scope, $http, GroupFactory, LinkFactory) {
+function homeController($scope, GroupFactory, LinkFactory) {
 
 //    Get groups
     GroupFactory.getGroups(function(response) {

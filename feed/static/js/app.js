@@ -8,5 +8,9 @@ peer_post.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '/static/js/views/home.html',
             controller: homeController
         })
+        .when('/link/:id', {
+            templateUrl: '/static/js/views/link.html',
+            controller: linkController
+        })
         .otherwise({redirectTo: '/'});
 }]);

@@ -83,3 +83,7 @@
 select {
     width: 100%;
 }
+
+.group-title {
+    margin-top: -5%;
+}
