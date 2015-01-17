@@ -40,6 +40,19 @@
 </head>
 <body>
     <div id="page-layout" class="container">
+    <div class="row">
+        <div class="col-sm-4 col-xs-11 top-row">
+            <h2 class="title">Peer Post <i class="fa fa-paper-plane"></i></h2>
+        </div>
+        <div class="col-sm-4 col-xs-1 top-row">
+            <h3 class="pull-right">{{ user.first_name | capfirst }} {{ user.last_name | capfirst }} <img class="profile-photo" src="{{ profile_photo.url }}"></h3>
+        </div>
+        <div class="col-sm-4 hidden-xs top-row">
+            <h3 align="center"><span class="user-actions"><a
+                    href="#"><i class="fa fa-home"></i> Home</a> <a href="{% url 'logout' %}"> Profile</a>  <a href="{% url 'logout' %}">Logout</a></span></h3>
+
+        </div>
+    </div>
         <div class="row">
             <!-- Angular Panels -->
             <div ng-app="peer_post">
@@ -49,6 +62,16 @@
                 </div>
             </div>
             <!-- User Panel -->
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!--
             <div align="center" class="col-md-4 col-sm-4 hidden-xs user-panel">
                 {% block users %}
                     {% if user.is_authenticated %}
@@ -85,7 +108,4 @@
                     {% endif %}
                 {% endblock users %}
             </div>
-        </div>
-    </div>
-</body>
-</html>
+            -->

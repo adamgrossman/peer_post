@@ -7,16 +7,28 @@ input {
 }
 
 .profile-photo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
+    /*display: block;*/
+    margin-right: -14px;
+    margin-left: 15px;
+    margin-top: -10px;
+    /*float: right;*/
+    border: 1px solid #43ac6a;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*margin-right: 10%;*/
+    /*width: 250px;*/
+    height: 50px
 }
 
 .user-info {
     width: 100%;
     font-size: 13px;
     text-align: left;
+}
+
+.user-actions > a {
+    padding-left: 22px;
+    font-size: 20px;
 }
 
 tr {
