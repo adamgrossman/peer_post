@@ -2,22 +2,35 @@
     display: none;
 }
 
+.title {
+    margin-top: 15px;
+}
+
 input {
     width: 350px;
 }
 
 .profile-photo {
-    /*display: block;*/
     margin-right: -14px;
     margin-left: 15px;
-    margin-top: -10px;
-    /*float: right;*/
+    /*margin-top: -10px;*/
     border: 1px solid #43ac6a;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*margin-right: 10%;*/
-    /*width: 250px;*/
     height: 50px
+}
+
+.profile-photo-small {
+    margin-top: -53px;
+    border: 1px solid #43ac6a;
+    height: 50px;
+    /*margin-left: auto;*/
+    /*margin-right: 5px;*/
+    /*position: fixed;*/
+}
+
+.user-xs {
+    text-align: right;
+    margin-right: 60px;
+    margin-top: 20px;
 }
 
 .user-info {
@@ -26,9 +39,15 @@ input {
     text-align: left;
 }
 
+.user-actions {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .user-actions > a {
-    padding-left: 22px;
-    font-size: 20px;
+    margin-bottom: 15px;
+    padding-left: 13px;
+    font-size: 17px;
 }
 
 tr {

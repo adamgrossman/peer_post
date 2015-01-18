@@ -38,21 +38,85 @@
     <script type="text/javascript"></script>
 
 </head>
+
 <body>
     <div id="page-layout" class="container">
-    <div class="row">
-        <div class="col-sm-4 col-xs-11 top-row">
-            <h2 class="title">Peer Post <i class="fa fa-paper-plane"></i></h2>
-        </div>
-        <div class="col-sm-4 col-xs-1 top-row">
-            <h3 class="pull-right">{{ user.first_name | capfirst }} {{ user.last_name | capfirst }} <img class="profile-photo" src="{{ profile_photo.url }}"></h3>
-        </div>
-        <div class="col-sm-4 hidden-xs top-row">
-            <h3 align="center"><span class="user-actions"><a
-                    href="#"><i class="fa fa-home"></i> Home</a> <a href="{% url 'logout' %}"> Profile</a>  <a href="{% url 'logout' %}">Logout</a></span></h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-7 top-row">
+                <h2 class="title">Peer Post <i class="fa fa-paper-plane"></i></h2>
+            </div>
 
+            {% if user.is_authenticated %}
+
+            <div class="col-md-5 col-sm-4 hidden-xs top-row">
+                <h4 class="user-brief pull-right">{{ user.first_name | capfirst }} {{ user.last_name | capfirst }} <img class="profile-photo" src="{{ profile_photo.url }}"></h4>
+            </div>
+
+            <div class="hidden-lg hidden-md hidden-sm col-xs-5 top-row">
+                <div>
+                    <h5 class="user-xs">{{ user.first_name | capfirst }}<br/><span class="small"><a href="{% url 'logout' %}">Logout</a></span></h5>
+                    <h5><img class="pull-right profile-photo-small" src="{{ profile_photo.url }}"></h5>
+                </div>
+            </div>
+
+            <div class="col-sm-4 hidden-xs top-row">
+                <h4 align="center"><span class="user-actions">
+                    <a href="#"><i class="fa fa-home"> </i> Home</a>
+                    <a href="{% url 'logout' %}"> Profile</a>
+                    <a href="{% url 'logout' %}">Logout</a></span></h4>
+            </div>
+
+            {% else %}
+
+            <div class="col-md-5 hidden-sm hidden-xs top-row">
+                <h4></h4>
+            </div>
+
+            <div class="col-sm-8 col-md-4 hidden-xs top-row">
+                <h4 align="right">
+                    <a href="{% url 'login' %}">Log in</a> |
+                    <a href="{% url "social:begin" "facebook" %}"><i class="fa fa-facebook-square"></i> Facebook Login</a>
+                </h4>
+                <h4 align="right">Not a member? <a href="{% url 'register' %}">Register now!</a></h4>
+            </div>
+
+            <div class="hidden-lg hidden-md hidden-sm col-xs-5 top-row">
+            <div align="right">
+                <h4 align="right"><a href="{% url 'login' %}">Log in</a> | <a href="{% url "social:begin" "facebook" %}"><i class="fa fa-facebook-square"></i></a></h4>
+                <h4><a href="{% url 'register' %}">Register</a></h4>
+            </div>
+            </div>
+
+
+            <!--
+            <div class="col-sm-4 hidden-xs top-row">
+                <h4><a href="{% url 'login' %}">Log in now!</a></h4>
+                <a href="{% url "social:begin" "facebook" %}">Facebook Login</a>
+            </div>
+            <div class="col-sm-8 col-xs-5 top-row pull-right">
+                <h3><a href="{% url 'login' %}">Log in now!</a></h3>
+                <a href="{% url "social:begin" "facebook" %}">Facebook Login</a>
+                <h3>Not a member? <a href="{% url 'register' %}">Register now!</a></h3>
+            </div>
+            -->
+
+            {% endif %}
+
+
+<!--
         </div>
-    </div>
+            {% if user.is_authenticated %}
+
+            {% else %}
+            <div class="hidden-lg hidden-md hidden-sm col-xs-5 top-row">
+                <h3><a href="{% url 'login' %}">Log in now!</a></h3>
+                <a href="{% url "social:begin" "facebook" %}">Facebook Login</a>
+                <h3>Not a member? <a href="{% url 'register' %}">Register now!</a></h3>
+            </div>
+            {% endif %}
+            -->
+        </div>
+
         <div class="row">
             <!-- Angular Panels -->
             <div ng-app="peer_post">
