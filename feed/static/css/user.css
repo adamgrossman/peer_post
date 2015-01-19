@@ -7,13 +7,16 @@
 }
 
 input {
-    width: 350px;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
 }
 
 .profile-photo {
     margin-right: -14px;
     margin-left: 15px;
-    /*margin-top: -10px;*/
     border: 1px solid #43ac6a;
     height: 50px
 }
@@ -22,9 +25,6 @@ input {
     margin-top: -53px;
     border: 1px solid #43ac6a;
     height: 50px;
-    /*margin-left: auto;*/
-    /*margin-right: 5px;*/
-    /*position: fixed;*/
 }
 
 .user-xs {
@@ -44,18 +44,11 @@ input {
     margin-right: auto;
 }
 
+.user-actions {
+    margin-top: 22px;
+}
+
 .user-actions > a {
-    margin-bottom: 15px;
     padding-left: 13px;
     font-size: 17px;
-}
-
-tr {
-    font-size: 12px;
-    height: 25px;
-    border-bottom: 1px dashed #d3d3d3;
-}
-
-th {
-    width: 90px;
 }
