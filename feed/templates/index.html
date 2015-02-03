@@ -38,53 +38,88 @@
     <script type="text/javascript"></script>
 
 </head>
+
 <body>
     <div id="page-layout" class="container">
         <div class="row">
-            <!-- Angular Panels -->
-            <div ng-app="peer_post">
-                <div class="col-md-8 col-sm-8 col-xs-12 angular-panel">
-                    <div ng-view>
+            <!-- Title -->
+            <div class="col-md-3 col-sm-4 col-xs-7 top-row">
+                <h2 class="title">Peer Post <i class="fa fa-paper-plane"></i></h2>
+            </div>
+
+            <!-- User Info -->
+            {% if user.is_authenticated %}
+
+                <div class="col-md-5 col-sm-4 hidden-xs top-row">
+                    <h4 class="user-brief pull-right">{{ user.first_name | capfirst }} {{ user.last_name | capfirst }} <img class="profile-photo" src="{{ profile_photo.url }}"></h4>
+                </div>
+
+                <!-- User Actions When XS -->
+                <div class="hidden-lg hidden-md hidden-sm col-xs-5 top-row">
+                    <div>
+                        <h5 class="user-xs">{{ user.first_name | capfirst }}<br/><span class="small"><a href="{% url 'logout' %}">Logout</a></span></h5>
+                        <h5><img class="pull-right profile-photo-small" src="{{ profile_photo.url }}"></h5>
                     </div>
                 </div>
-            </div>
-            <!-- User Panel -->
-            <div align="center" class="col-md-4 col-sm-4 hidden-xs user-panel">
-                {% block users %}
-                    {% if user.is_authenticated %}
-                        <h2>{{ user.first_name | capfirst }} {{ user.last_name | capfirst }}</h2>
-                        <p id="logged_id">{{ user.id }}</p>
+
+                <!-- User Actions When Not XS -->
+                <div class="col-sm-4 hidden-xs top-row">
+                    <h4 align="center" class="user-actions">
+                            <a href="#"><i class="fa fa-home"> </i> Home</a>
+                            <a href="{% url 'logout' %}"> Profile</a>
+                            <a href="{% url 'logout' %}">Logout</a>
+                    </h4>
+                </div>
+
+            {% else %}
+
+                <!-- Blank Header -->
+                <div class="col-sm-8 col-md-9 col-xs-5 top-row">
+                </div>
+
+            {% endif %}
+        </div>
+
+        <div class="row">
+
+            {% if user.is_authenticated %}
+
+                <!-- Authenticated Angular Panels -->
+                <div ng-app="peer_post">
+                    <div class="col-md-8 col-sm-8 col-xs-12 angular-panel">
+                        <div ng-view>
+                        </div>
+                    </div>
+                </div>
+
+            {% else %}
+
+                <!-- Not Authenticated Angular Panels -->
+                <div ng-app="peer_post">
+                    <div class="col-md-8 col-sm-8 hidden-xs angular-panel">
+                        <div ng-view>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Action Panels -->
+                <div class="col-md-4 col-sm-4 col-xs-12 user-panel">
+                    {% block users %}
+                    <div align="center">
                         <br>
-                        <img class="profile-photo" src="{{ profile_photo.url }}">
-                        <br>
-                        Basic Information
-                        <br>
-                        <table class="user-info">
-                            <tr>
-                                <th>Username</th>
-                                <td>{{ user.username }}</td>
-                            </tr>
-                            <tr>
-                                <th>First Name</th>
-                                <td>{{ user.first_name | capfirst }}</td>
-                            </tr>
-                            <tr>
-                                <td>Last Name</td>
-                                <td>{{ user.last_name | capfirst }}</td>
-                            </tr>
-                            <tr>
-                                <td>Bio</td>
-                                <td>{{ user.bio }}</td>
-                            </tr>
-                        </table>
-                        <h6><a href="{% url 'logout' %}">Log out</a></h6>
-                    {% else %}
-                        <h3><a href="{% url 'login' %}">Log in now!</a></h3>
-                        <a href="{% url "social:begin" "facebook" %}">Facebook Login</a>
-                        <h3>Not a member? <a href="{% url 'register' %}">Register now!</a></h3>
-                    {% endif %}
-                {% endblock users %}
-            </div>
+                        <h2>Welcome to Peer Post</h2>
+                        <h4>Peer Post is a forum to share genuine content to your social circles</h4>
+                        <br><br>
+                        <h4>
+                            <a href="{% url 'login' %}">Log in</a> |
+                            <a href="{% url "social:begin" "facebook" %}"><i class="fa fa-facebook-square"></i> Facebook Login</a>
+                        </h4>
+                        <h4>Not a member? <a href="{% url 'register' %}">Register now!</a></h4>
+                    </div>
+                    {% endblock users %}
+                </div>
+
+            {% endif %}
         </div>
     </div>
 </body>

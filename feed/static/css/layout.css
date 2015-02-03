@@ -11,7 +11,7 @@
 }
 
 .user-panel {
-    height: 100vh;
+    height: 90vh;
     overflow-y: scroll;
     border-left: 1px solid #d3d3d3;
 }
@@ -28,7 +28,7 @@
 }
 
 .angular-panel {
-    height: 100vh;
+    height: 90vh;
 }
 
 .link-info {

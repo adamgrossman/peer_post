@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd263e09-1c06-4643-aa01-b95fc67fc8d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/js/views/home.html" afterPath="$PROJECT_DIR$/feed/static/js/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/templates/index.html" afterPath="$PROJECT_DIR$/feed/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/css/layout.css" afterPath="$PROJECT_DIR$/feed/static/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/templates/registration/register.html" afterPath="$PROJECT_DIR$/feed/templates/registration/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed/static/css/user.css" afterPath="$PROJECT_DIR$/feed/static/css/user.css" />
     </list>
     <ignored path="peer_post.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +27,24 @@
     <favorites_list name="peer_post" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6">
+    <splitter split-orientation="horizontal" split-proportion="0.659375">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.4347825" vertical-offset="504" max-vertical-offset="1358">
-                  <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.8189655" vertical-offset="1384" max-vertical-offset="1848">
+                  <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/feed/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="588">
+                  <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
@@ -42,18 +53,8 @@
           <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feed/static/js/views/home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-4.869565" vertical-offset="0" max-vertical-offset="1176">
-                  <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21444201" vertical-offset="0" max-vertical-offset="457">
-                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <state vertical-scroll-proportion="-7.9130435" vertical-offset="14" max-vertical-offset="1204">
+                  <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -74,16 +75,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="308">
                   <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="serializers.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/feed/v1/api/serializers.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1050">
-                  <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
                   <folding />
                 </state>
               </provider>
@@ -136,7 +127,7 @@
           <file leaf-file-name="angular-styling.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feed/static/css/angular-styling.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1316">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1218" max-vertical-offset="1316">
                   <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
                   <folding />
                 </state>
@@ -146,24 +137,24 @@
           <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feed/static/css/layout.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="700">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
+                  <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user.css" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="user.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/feed/static/css/user.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="490">
-                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.616" vertical-offset="0" max-vertical-offset="840">
+                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="homeController.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="homeController.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/feed/static/js/controllers/homeController.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1134">
@@ -199,15 +190,11 @@
         <option value="$PROJECT_DIR$/feed/forms.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/feed/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/feed/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/feed/static/js/factories/groupFactory.js" />
         <option value="$PROJECT_DIR$/peer_post/urls.py" />
         <option value="$PROJECT_DIR$/feed/models.py" />
         <option value="$PROJECT_DIR$/peer_post/settings.py" />
-        <option value="$PROJECT_DIR$/feed/views.py" />
         <option value="$PROJECT_DIR$/feed/v1/api/serializers.py" />
-        <option value="$PROJECT_DIR$/feed/static/css/user.css" />
-        <option value="$PROJECT_DIR$/feed/static/css/layout.css" />
         <option value="$PROJECT_DIR$/feed/static/js/factories/linksFactory.js" />
         <option value="$PROJECT_DIR$/feed/v1/api/views.py" />
         <option value="$PROJECT_DIR$/feed/static/js/directives/buttonDirective.js" />
@@ -215,16 +202,21 @@
         <option value="$PROJECT_DIR$/feed/static/js/views/link.html" />
         <option value="$PROJECT_DIR$/feed/static/js/app.js" />
         <option value="$PROJECT_DIR$/feed/static/js/controllers/homeController.js" />
-        <option value="$PROJECT_DIR$/feed/templates/index.html" />
         <option value="$PROJECT_DIR$/feed/static/js/controllers/linkController.js" />
-        <option value="$PROJECT_DIR$/feed/static/js/views/home.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/feed/static/js/views/home.html" />
+        <option value="$PROJECT_DIR$/feed/views.py" />
+        <option value="$PROJECT_DIR$/feed/static/css/layout.css" />
+        <option value="$PROJECT_DIR$/feed/templates/registration/register.html" />
+        <option value="$PROJECT_DIR$/feed/templates/index.html" />
+        <option value="$PROJECT_DIR$/feed/static/css/user.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1274" />
     <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -253,6 +245,24 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -460,6 +470,10 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -485,24 +499,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,7 +509,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/app.js&#10;lay&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/layout.css&#10;angu&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/angular-styling.css&#10;seria&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;link&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/factories/linksFactory.js&#10;models&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;views&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/views.py&#10;home&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/views/home.html&#10;urls&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;setting&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;sett&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;seri&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;set&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;url&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;login&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/login.html&#10;regi&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;user&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/user.css&#10;settin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;mode&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;reg&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;model&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;regis&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;admin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/admin.py&#10;setti&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py" />
+    <property name="SearchEverywhereHistoryKey" value="forms&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/forms.py&#10;regi&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;views&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/views.py&#10;app&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/app.js&#10;lay&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/layout.css&#10;angu&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/angular-styling.css&#10;seria&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;link&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/factories/linksFactory.js&#10;models&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;home&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/js/views/home.html&#10;urls&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;setting&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;sett&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;seri&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/v1/api/serializers.py&#10;set&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;url&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/urls.py&#10;login&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/login.html&#10;user&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/static/css/user.css&#10;settin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py&#10;mode&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;reg&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;model&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/models.py&#10;regis&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/templates/registration/register.html&#10;admin&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/feed/admin.py&#10;setti&#9;FILE&#9;file:///Users/Adam/Desktop/New_Projects/peer_post/peer_post/settings.py" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -618,27 +614,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="peer_post" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -664,7 +640,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="peer_post" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -750,7 +746,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="2" y="23" width="1274" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -758,19 +754,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10703125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17265625" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22443181" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21732955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -788,9 +784,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19602273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1018,24 +1014,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/templates/registration/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030549899" vertical-offset="0" max-vertical-offset="491">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1064,14 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6245353" vertical-offset="0" max-vertical-offset="588">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,22 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1316">
           <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/static/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed/static/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="490">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1177,26 +1135,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4347825" vertical-offset="504" max-vertical-offset="1358">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.21444201" vertical-offset="0" max-vertical-offset="457">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="588">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/static/js/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.869565" vertical-offset="0" max-vertical-offset="1176">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="-7.9130435" vertical-offset="14" max-vertical-offset="1204">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/feed/static/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21444201" vertical-offset="0" max-vertical-offset="457">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63244355" vertical-offset="0" max-vertical-offset="487">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/templates/registration/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4525862" vertical-offset="0" max-vertical-offset="464">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/static/css/user.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.616" vertical-offset="0" max-vertical-offset="840">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8189655" vertical-offset="1384" max-vertical-offset="1848">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -2,15 +2,35 @@
     display: none;
 }
 
+.title {
+    margin-top: 15px;
+}
+
 input {
-    width: 350px;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
 }
 
 .profile-photo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
+    margin-right: -14px;
+    margin-left: 15px;
+    border: 1px solid #43ac6a;
+    height: 50px
+}
+
+.profile-photo-small {
+    margin-top: -53px;
+    border: 1px solid #43ac6a;
+    height: 50px;
+}
+
+.user-xs {
+    text-align: right;
+    margin-right: 60px;
+    margin-top: 20px;
 }
 
 .user-info {
@@ -19,12 +39,16 @@ input {
     text-align: left;
 }
 
-tr {
-    font-size: 12px;
-    height: 25px;
-    border-bottom: 1px dashed #d3d3d3;
+.user-actions {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-th {
-    width: 90px;
+.user-actions {
+    margin-top: 22px;
+}
+
+.user-actions > a {
+    padding-left: 13px;
+    font-size: 17px;
 }
