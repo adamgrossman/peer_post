@@ -1,8 +1,6 @@
-from django.contrib.auth.models import AbstractUser
+from __future__ import unicode_literals
 from django.db import models
-from mptt.managers import TreeManager
-from mptt.models import MPTTModel
-from mptt.fields import TreeForeignKey
+from django.contrib.auth.models import AbstractUser
 
 
 class Member(AbstractUser):
@@ -17,7 +15,7 @@ class Group(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    member = models.ManyToManyField(Member, related_name="subscriber", blank=True, null=True)
+    member = models.ManyToManyField(Member, related_name="subscriber", blank=True)
 
     def __unicode__(self):
         return u'{}'.format(self.title)
@@ -29,7 +27,7 @@ class Link(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     flag = models.IntegerField(default=0)
-    star = models.ManyToManyField(Member, blank=True, null=True, related_name="starred")
+    star = models.ManyToManyField(Member, blank=True, related_name="starred")
     # changed from ForeignKey to ManytoManyField to have many users star links
     posted_user = models.ForeignKey(Member, related_name="posted")
     group = models.ForeignKey(Group, related_name="links")
@@ -55,13 +53,12 @@ class Vote(models.Model):
         return u'{} voted on: {}'.format(self.voter.username, self.link.title)
 
 
-class Comment(MPTTModel):
-    all_objects = TreeManager()
+class Comment(models.Model):
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(Member, related_name="comments")
     link = models.ForeignKey(Link, related_name="comments")
-    parent = TreeForeignKey('self', blank=True, null=True, related_name="children")
+    parent = models.ForeignKey('Comment', blank=True, null=True, related_name="children")
 
     def __unicode__(self):
         return u'{} by {}'.format(self.body, self.author.username)
