@@ -38,12 +38,10 @@ INSTALLED_APPS = (
     'channels',
     'djangular',
     'feed',
-    # 'python-social-auth',
     'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
-    # 'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -71,8 +69,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # 'social.apps.django_app.context_processors.backends',
-                # 'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -132,13 +128,8 @@ except ImportError:
     pass
 
 AUTHENTICATION_BACKENDS = (
-    # 'social.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
-
-SOCIAL_AUTH_FACEBOOK_KEY = '1513610548918411'
-SOCIAL_AUTH_FACEBOOK_SECRET = '6cf4537432d1dfbba41107c6b22e07be'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'public_profile', 'user_friends', 'user_photos']
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))

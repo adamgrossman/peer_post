@@ -8,17 +8,13 @@ from feed import views
 
 
 urlpatterns = [
-
-    # REGISTRATION AND LOGIN
+    # Registration, Login, and Logout
     url(r'^register/$', views.register, name='register'),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/logout/$', auth_views.logout, {'next_page': 'index'}, name='logout'),    
 
-    # DJANGO REST API
-    # url(r'^api/v1/', include('feed.v1.urls', namespace='v1')),
+    # Django Rest API
     url(r'^api/v1/', include(router.urls)),
-    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # url('', include(social.apps.django_app.urls, namespace='social')),
 
     url(r'^home/', views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
