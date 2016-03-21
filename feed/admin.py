@@ -1,5 +1,6 @@
+import views
 from django.contrib import admin
-from feed.models import Member, Group, Link, Comment, Vote
+from models import *
 
 admin.site.register(Member)
 admin.site.register(Group)
