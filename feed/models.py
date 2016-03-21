@@ -3,40 +3,42 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class Member(AbstractUser):
+class TimeStampedBaseMixin(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        abstract = True
+
+
+class Member(AbstractUser, TimeStampedBaseMixin):
     profile_photo = models.ImageField(upload_to='member_photos', blank=True, null=True)
-    bio = models.TextField(blank=True, null=True)
+    bio = models.TextField(blank=True)
 
     def __unicode__(self):
         return u'{}'.format(self.username)
 
 
-class Group(models.Model):
+class Group(TimeStampedBaseMixin):
     title = models.CharField(max_length=50)
     description = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    member = models.ManyToManyField(Member, related_name="subscriber", blank=True)
+    subscribers = models.ManyToManyField(Member, related_name="subscribers", blank=True)
 
     def __unicode__(self):
         return u'{}'.format(self.title)
 
 
-class Link(models.Model):
+class Link(TimeStampedBaseMixin):
     url = models.URLField()
     title = models.CharField(max_length=100)
     description = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    flag = models.IntegerField(default=0)
-    star = models.ManyToManyField(Member, blank=True, related_name="starred")
-    # changed from ForeignKey to ManytoManyField to have many users star links
-    posted_user = models.ForeignKey(Member, related_name="posted")
+    submitted_by = models.ForeignKey(Member, related_name="links", null=True)
     group = models.ForeignKey(Group, related_name="links")
 
     def __unicode__(self):
         return u'{}'.format(self.title)
 
 
-class Tag(models.Model):
+class Tag(TimeStampedBaseMixin):
     name = models.CharField(max_length=50)
     link = models.ManyToManyField(Link, related_name="tags")
 
@@ -44,7 +46,7 @@ class Tag(models.Model):
         return u'{}'.format(self.name)
 
 
-class Vote(models.Model):
+class Vote(TimeStampedBaseMixin):
     up_vote = models.BooleanField(default=True)
     voter = models.ForeignKey(Member, related_name="votes")
     link = models.ForeignKey(Link, related_name="votes")
@@ -53,12 +55,16 @@ class Vote(models.Model):
         return u'{} voted on: {}'.format(self.voter.username, self.link.title)
 
 
-class Comment(models.Model):
+class Comment(TimeStampedBaseMixin):
     body = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(Member, related_name="comments")
     link = models.ForeignKey(Link, related_name="comments")
-    parent = models.ForeignKey('Comment', blank=True, null=True, related_name="children")
+    parent = models.ForeignKey("self", blank=True, null=True, related_name="children")
 
     def __unicode__(self):
         return u'{} by {}'.format(self.body, self.author.username)
+
+
+class Star(TimeStampedBaseMixin):
+    link = models.ForeignKey(Link, related_name="stars")
+    member = models.ForeignKey(Member, related_name="stars")
